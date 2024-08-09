@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To Do List</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <form>
-        <input type="text" placeholder="할 일을 입력하세요">
-        <button>등록</button>
-        </form>
-
-        <ul></ul>
-
-        <script src="script.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="head">To Do List
+    <div id="current-time" class="time-display">현재 시간</div>
+  </header>
+  <div class="container">
+    <button class="toggle-form">새로운 일정 추가</button>
+    <form class="todo-form hide" action="#">
+      <input type="text" class="title" placeholder="일정 이름" required>
+      <textarea class="description" placeholder="세부사항" required></textarea>
+      <input type="date" class="duedate" required>
+      <button type="submit">확인</button>
+    </form>
+    <div class="todo-list"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
